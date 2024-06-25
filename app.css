@@ -1,0 +1,30 @@
+body {
+background-color: hsl(148, 38%, 91%);
+}
+#BaseForm{
+    background-color: white;
+    margin: 50px 400px 100px 400px;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+}
+
+input {
+    padding: 7px 0px 7px 0px;
+    border-radius: 5px;
+}
+#QueryBorder{
+    padding: 7px 0px 7px 0px;
+    border-radius: 5px;
+border-color: black;
+}
+#Massage{
+    padding-bottom: 50px;
+}
+.firstnameeror{
+    display: none;
+}
+#LastNameInput{
+    margin-left: 50px;
+}
