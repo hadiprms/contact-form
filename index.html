@@ -16,13 +16,42 @@
       text-align: center;
     }
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
+    #successAlert {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* width: 100%;
+      height: 100%; */
+      background-color: hsl(187, 24%, 22%);
+      z-index: 9999;
+      overflow: hidden;
+    }
+
+    #successAlert img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    #successColor1 {
+      color: hsl(0, 0%, 100%);
+    }
+
+    #successColor2 {
+      color: hsl(186, 15%, 59%);
     }
   </style>
 </head>
 
 <body>
+  <div style="border:1px solid hsl(187, 24%, 22%)" id="successAlert">
+    <div class="d-flex" id="successColor1">
+      <img class="img-fulid" src="assets/images/icon-success-check.svg" alt="">
+      <p>Massage Sent!</p>
+    </div>
+    <p id="successColor2">Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
   <div class="">
     <section class="border" id="BaseForm">
       <form action="/shelter">
@@ -35,38 +64,53 @@
           </div>
           <div class="mb-3">
             <input class="col-lg-5" id="FirstNameInput" type="text" required>
-            <label class="col-lg-6 firstnameeror" for=""> This field is required</label>
-            <input class="col-lg-5" id="LastNameInput" type="text" required>
-            <label class="col-lg-6 LastNameError" for=""> This field is required</label>
 
+            <input class="col-lg-5" id="LastNameInput" type="text" required>
+            <div id="NameInputError" class="d-flex">
+              <label class="col-lg-6 firstnameeror" for=""> This field is required</label>
+              <label class="col-lg-6" id="fixCol" for=""></label>
+              <label class="col-lg-6 LastNameError" for=""> This field is required</label>
+            </div>
 
           </div>
           <div class="d-grid mb-3">
             <label for="EmailAddress">Email Address *</label>
             <input class="col-lg-11" id="EmailAddress" type="email">
           </div>
+          <div>
+            <label id="mailError" for="">Please enter a valid email address</label>
+          </div>
           <div class="mb-1">
             <label class="mb-2" for="QueryType">Query Type *</label>
             <div class="d-flex">
               <div id="QueryBorder" class="border col-lg-5">
-                <input type="radio" id="QueryType1" name="SelectOne" value="General Enquiry">
+                <input type="radio" id="QueryType1" name="SelectOne" value="General Enquiry" required>
                 <label for="QueryType"> General Enquiry</label>
               </div>
               <div class="col-lg-1"></div>
               <div id="QueryBorder" class="border col-lg-5">
-                <input type="radio" id="QueryType2" name="SelectOne" value="Support Request">
+                <input type="radio" id="QueryType2" name="SelectOne" value="Support Request" required>
                 <label for="QueryType"> Support Request</label>
               </div>
+            </div>
+            <div>
+              <label id="queryError" for="">Please select a query type</label>
             </div>
             <div class="d-grid">
               <label class="mt-4" for="Massage">Message *</label>
               <input class="col-lg-11 mb-4" type="text" id="Massage">
             </div>
             <div>
-              <input id="CheckBox" type="checkbox">
-              <label for="CheckBox">I consent to being contacted by the team *</label>
+              <label id="massageError" for="">This field is required</label>
             </div>
-            <button type="button" class="btn btn-success col-lg-11">Submit</button>
+            <div>
+              <input id="CheckBox" type="checkbox">
+              <label id="checkbox1" for="CheckBox">I consent to being contacted by the team *</label>
+            </div>
+            <div>
+              <label id="checkboxError" for="">To submit this form, please consent to being contacted</label>
+            </div>
+            <button id="SubmitButton" type="button" class="btn btn-success col-lg-11">Submit</button>
           </div>
       </form>
     </section>

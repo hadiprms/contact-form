@@ -1,13 +1,14 @@
 body {
 background-color: hsl(148, 38%, 91%);
 }
-#BaseForm{
+form{
     background-color: white;
     margin: 50px 400px 100px 400px;
     border-radius: 20px;
     padding-top: 20px;
     padding-bottom: 40px;
     padding-left: 30px;
+    margin-top: 105px;
 }
 
 input {
@@ -25,6 +26,63 @@ border-color: black;
 .firstnameeror{
     display: none;
 }
+.LastNameError{
+    display: none;
+}
+#mailError{
+    display: none;
+    margin-top: -15px;
+}
 #LastNameInput{
     margin-left: 50px;
 }
+#NameInputError{
+    color: red;
+}
+#FirstNameInput.error {
+    border-color: red;
+  }
+#LastNameInput.error {
+    border-color: red;
+  }
+#EmailAddress.error{
+    border-color: red;
+}
+#Massage.error{
+    border-color: red;
+}
+#mailError{
+    color: red;
+}
+#queryError{
+    color: red;
+    display: none;
+}
+#massageError{
+    color: red;
+    display: none;
+    margin-bottom: 30px;
+    margin-top: -20px;
+}
+#checkboxError{
+    display: none;
+    color: red;
+    margin-bottom: 30px;
+}
+#fixCol{
+    display: none;
+}
+input:hover{
+    border-color: hsl(169, 82%, 27%);
+}
+#CheckBox{
+    accent-color: green;
+}
+#successAlert{
+    margin-left: 37%;
+    margin-bottom: 50%;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px 10px 5px 10px;
+}
+
